@@ -1,0 +1,53 @@
+{
+    "intro": {
+      "slide1": {
+        "title": "Welcome to Axie Battle Helper!",
+        "thisTool": "This tool will help you count the cards and energies from your opponent",
+        "recommend": "We recommend you to keep the app at one side of the screen, and the game on 'window mode' at the other side"
+      },
+      "slide2": {
+        "title": "Step 1: Identify your enemies",
+        "first": "Fist, write down the Axie's IDs",
+        "tedious": "It could be a little tedious, but we will save time later!"
+      },
+      "slide3": {
+        "title": "Step 2: Select the cards played",
+        "first": "Select the cards your enemy have played. Energies and cards will decrease automatically",
+        "steal": "The energies stealed have to be updated manually with the '+' y '-' buttons"
+      },
+      "slide4": {
+        "title": "Atention",
+        "first": "When your enemy has 6 or less remaining cards, available cards will be restored. When you click them they won't get greyed out because he might have them next round"
+      },
+      "slide5": {
+        "title": "Atention",
+        "first": "When you kill an Axie, click the 'Kill' button and the cards it didn't played will be discounted from the deck"
+      }
+      ,
+      "slide6": {
+        "title": "Finally",
+        "first": "Keep a record from your wins, draws and looses!"
+      }
+    },
+    "main": {
+        "notFound": "Axie not found",
+        "round": "Round",
+        "nextRound": "Next Round"
+    },
+    "tabs": {
+        "battle": "Battle",
+        "logs": "Logs",
+        "donations": "Donations",
+        "help": "Help"
+    },
+    "donations": {
+        "helped": "Helped you win more SLP? You can help me to keep improving this tool!",
+        "contact": "Contact"
+    },
+    "logs": {
+        "title": "Match Logs",
+        "totals": "All time log",
+        "reset": "Reset",
+        "winRate": "Win Rate"
+    }
+  }

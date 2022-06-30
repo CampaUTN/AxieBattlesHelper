@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-row>
+        <ion-col>
+          <p>{{ 'logs.title' | translate }}</p>
+        </ion-col>
+        <ion-col>
+          
+        </ion-col>
+        <ion-col class="center">
+          <ion-button (click)="reset()" size="small"> <p>{{ 'logs.reset' | translate }}</p> </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides #slides pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let data of historyGallery" [ngStyle]="{'background-color': data.color}">
+      <ion-grid color="data.color">
+        <ion-row class="center">
+          <h3><p class="black">{{ data.date | date: 'dd/MM' }}</p></h3>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p class="black">WIN: {{ data.won }}</p>
+          </ion-col>
+          <ion-col>
+            <p class="black">DRAW: {{ data.draw }}</p>
+          </ion-col>
+          <ion-col>
+            <p class="black">LOSS: {{ data.loss }} </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-card>
+    <ion-header class="center">
+      <p>{{ 'logs.totals' | translate }}</p>
+    </ion-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="center">
+            <p class="win">Win: {{ wins }}</p>
+          </ion-col>
+          <ion-col class="center">
+            <p>Draw: {{ draws }}</p>
+          </ion-col>
+          <ion-col class="center">
+            <p class="lose">Loss: {{ losses }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="center">
+          <p>{{ 'logs.winRate' | translate }}: {{ winPercentage }}%</p>
+        </ion-row>
+    </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-list *ngFor="let record of history" class="ion-no-padding">
+    <ion-item class="ion-no-padding">
+      <p class="recordHistory" style="font-size: 11px" [ngClass]="{'win': record.result == 'win', 'lose': record.result == 'loss'}"> {{ record.result.toUpperCase() }} </p>
+      <p style="padding-left: 10px; font-size: 11px"> - {{ record.date | date: 'dd/MM/yyyy hh:mm' }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

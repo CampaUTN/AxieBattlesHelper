@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "AxieBattleHelper",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

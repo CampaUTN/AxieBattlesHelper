@@ -1,0 +1,54 @@
+{
+    "intro": {
+      "slide1": {
+          "title": "Bienvenido a Axie Battle Helper!",
+          "thisTool": "Esta herramienta te ayudará a contar las energías y cartas del enemigo",
+          "recommend": "Te recomendamos tener la aplicacion en un lado de la pantalla con el juego en modo ventana"
+      },
+      "slide2": {
+          "title": "Paso 1: Identificar los axies",
+          "first": "Primero, ingresá los ID de los axies enemigos",
+          "tedious": "Puede ser un poco tedioso pero nos hará ahorrar tiempo!"
+      },
+      "slide3": {
+        "title": "Paso 2: Seleccionar las cartas en juego",
+        "first": "Seleccione las cartas que juega el rival. Se descontarán las energias y cartas automaticamente",
+        "steal": "Las energias que le hayas robado o tu oponente te haya quitado a ti, deberás actualizarlas con los signos '+' y '-'"
+      },
+      "slide4": {
+        "title": "Atención",
+        "first": "Cuando tu rival tenga 6 cartas, se reiniciarán las cartas disponibles. Las que selecciones no se oscurecerán ya que podrá volver a tenerlas"
+      },
+      "slide5": {
+        "title": "Atención",
+        "first": "Si matas a un axie, apretando el botón de 'Kill' se descontarán las cartas que no jugo del mazo"
+      }
+      ,
+      "slide6": {
+        "title": "Por último",
+        "first": "Lleva un registro de las partidas ganadas, empatadas y perdidas!"
+      }
+    },
+    "main": {
+        "notFound": "Axie no encontrado",
+        "round": "Ronda",
+        "nextRound": "Siguiente Ronda"
+    },
+    "tabs": {
+        "battle": "Batalla",
+        "logs": "Historial",
+        "donations": "Donaciones",
+        "help": "Ayuda"
+    },
+    "donations": {
+        "helped": "Te hemos ayudado a ganar más SLP? Podes ayudarnos a seguir mejorando esta APP!",
+        "contact": "Contacto"
+    },
+    "logs": {
+        "title": "Historial de partidas",
+        "totals": "Registro histórico",
+        "reset": "Reiniciar",
+        "winRate": "Porcentaje de victorias"
+    }
+}
+  

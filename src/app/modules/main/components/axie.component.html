@@ -1,0 +1,101 @@
+<ion-card [ngClass]="{'used': !stateVariable.live}">
+  <ion-grid style="padding-top: 0px" >
+    <ion-row>
+      <ion-col size="4">
+        <ion-row>
+          <ion-col> 
+            <p class="card-title" style="color: whitesmoke">Axie N° {{ axieNumber }} </p>
+          </ion-col>
+          <ion-col class="center">
+            <img class="axieImg" [src]="stateVariable?.data?.axie?.image" *ngIf="stateVariable?.data"/>
+          </ion-col>
+          <ion-col class="center">
+            <ion-button (click)="killOrResurrect()" *ngIf="stateVariable.data" color="danger" size="small"><p>{{ stateVariable.live ? 'Kill' : 'Resurrect' }}</p></ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-input [(ngModel)]="id" class="search-input" placeHolder="ID">
+          </ion-input>
+          <ion-button color="black" size="small" (click)="findAxie()">
+            <ion-icon style="color:white" name="search-outline"></ion-icon>
+          </ion-button>
+        </ion-row>
+      </ion-col>
+      <ion-col size="8">
+        <ion-grid style="padding-top: 0px">
+          <ion-row class="ion-justify-content-around">
+            <ion-col (click)="change(1,'a')" class="center">
+              <p *ngIf="axieNotFound" style="color: red" class="center">
+                {{ 'main.notFound' | translate }}
+              </p>
+              <div class="card" [ngClass]="{'used': isUsed(1,'a') && !resetCards}">
+                <img
+                  *ngIf="stateVariable?.data != null"
+                  [src]="stateVariable?.data?.axie?.parts[2].abilities[0].backgroundUrl"
+                />
+              </div>
+            </ion-col>
+            <ion-col (click)="change(1,'b')" class="center">
+              <div class="card" [ngClass]="{'used': isUsed(1,'b') && !resetCards}">
+                <img
+                  *ngIf="stateVariable?.data != null"
+                  [src]="stateVariable?.data?.axie?.parts[3].abilities[0].backgroundUrl"
+                />
+              </div>
+            </ion-col>
+            <ion-col (click)="change(1,'c')" class="center">
+              <div class="card" [ngClass]="{'used': isUsed(1,'c') && !resetCards}">
+                <img
+                  *ngIf="stateVariable?.data != null"
+                  [src]="stateVariable?.data?.axie?.parts[4].abilities[0].backgroundUrl"
+                />
+              </div>
+            </ion-col>
+            <ion-col (click)="change(1,'d')" class="center">
+              <div class="card" [ngClass]="{'used': isUsed(1,'d') && !resetCards}">
+                <img
+                  *ngIf="stateVariable?.data != null"
+                  [src]="stateVariable?.data?.axie?.parts[5].abilities[0].backgroundUrl"
+                />
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col (click)="change(2,'a')" class="center">
+              <div class="card" [ngClass]="{'used': isUsed(2,'a') && !resetCards}">
+                <img
+                  *ngIf="stateVariable?.data != null"
+                  [src]="stateVariable?.data?.axie?.parts[2].abilities[0].backgroundUrl"
+                />
+              </div>
+            </ion-col>
+            <ion-col (click)="change(2,'b')" class="center">
+              <div class="card" [ngClass]="{'used': isUsed(2,'b') && !resetCards}">
+                <img
+                  *ngIf="stateVariable?.data != null"
+                  [src]="stateVariable?.data?.axie?.parts[3].abilities[0].backgroundUrl"
+                />
+              </div>
+            </ion-col>
+            <ion-col (click)="change(2,'c')" class="center">
+              <div class="card" [ngClass]="{'used': isUsed(2,'c') && !resetCards}">
+                <img
+                  *ngIf="stateVariable?.data != null"
+                  [src]="stateVariable?.data?.axie?.parts[4].abilities[0].backgroundUrl"
+                />
+              </div>
+            </ion-col>
+            <ion-col (click)="change(2,'d')" class="center">
+              <div class="card" [ngClass]="{'used': isUsed(2,'d') && !resetCards}">
+                <img
+                  *ngIf="stateVariable?.data != null"
+                  [src]="stateVariable?.data?.axie?.parts[5].abilities[0].backgroundUrl"
+                />
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+ </ion-grid>
+</ion-card>

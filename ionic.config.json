@@ -1,0 +1,7 @@
+{
+  "name": "AxieBattleHelper",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

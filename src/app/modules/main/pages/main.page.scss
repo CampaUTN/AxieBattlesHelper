@@ -1,0 +1,17 @@
+.incrementer {
+    cursor: pointer;
+}
+
+.incrementer:hover, .incrementer:active {
+    color: white
+}
+
+.topBarButton {
+  color: #1a1a1a;
+}
+
+.incrementer:active {
+  transform: translateY(1px);
+}
+
+

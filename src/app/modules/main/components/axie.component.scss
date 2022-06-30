@@ -1,0 +1,27 @@
+.card {
+    max-width: 65px;
+    max-height: 65px;
+    border: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.card:active {
+    transform: translateY(1px);
+}
+  
+.used {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+.unused {
+    background-color: none;
+}
+.axieImg {
+    max-width: 75px;
+    max-height: 75px;
+}
+.search-input {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}

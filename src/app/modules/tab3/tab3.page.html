@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <p>{{ 'donations.contact' | translate }}</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <p style="color: white; font-size: 18px;">{{ 'donations.helped' | translate }}</p>
+      <br>
+      <ion-row>
+        <p style="color: white; font-size: 18px">Paypal: </p> <input style="margin-left: 20px" (click)="openDonate()" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      </ion-row>
+      <br>
+      <ion-row>
+        <p style="color: white; font-size: 18px">Ronin: </p> <div class="center" (click)="copyToClipboard('ronin')" class="donationAddress"> {{ ronin }} </div>
+      </ion-row>
+      <br>
+      <ion-row>
+        <p style="color: white; font-size: 18px">Metamask: </p> <div class="center" (click)="copyToClipboard('metamask')" class="donationAddress"> {{ metamask }} </div> 
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+ 
+
+</ion-content>

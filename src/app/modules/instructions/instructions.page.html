@@ -1,0 +1,105 @@
+<ion-content>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="start" *ngIf="!disablePrevBtn">
+    <ion-fab-button color="danger" (click)="prev()">
+      <ion-icon style="zoom: 1" style="color: black" name="arrow-back-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" *ngIf="!disableNextBtn">
+    <ion-fab-button color="success" (click)="next()">  
+      <ion-icon style="zoom: 1" name="arrow-forward-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-slides #slides pager="true" (ionSlideWillChange)="doCheck()" [options]="slideOpts">
+    <ion-slide>
+      <ion-grid>
+        <ion-row class="center">
+          <h1><p>{{ 'intro.slide1.title' | translate }}</p></h1>
+        </ion-row>
+        <ion-row class="center">
+          <p>{{ 'intro.slide1.thisTool' | translate }}</p>
+          <p>{{ 'intro.slide1.recommend' | translate }}</p>
+        </ion-row>
+        <ion-row>
+          <img src="../../../assets/icon/window.png">
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row class="center">
+          <h1><p>{{ 'intro.slide2.title' | translate }}</p></h1>
+        </ion-row>
+        <ion-row class="center">
+          <p>{{ 'intro.slide2.first' | translate }}</p>
+          <p>{{ 'intro.slide2.tedious' | translate }}</p>
+        </ion-row>
+        <ion-row class="center">
+          <video width="100%" autoplay muted loop controls>
+            <source src="../../../assets/step2.mov" type="video/mp4">
+          </video>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row class="center">
+          <h1><p>{{ 'intro.slide3.title' | translate }}</p></h1>
+        </ion-row>
+        <ion-row class="center">
+          <p>{{ 'intro.slide3.first' | translate }}</p>
+          <p>{{ 'intro.slide3.steal' | translate }}</p>
+        </ion-row>
+        <ion-row class="center">
+          <video width="100%" autoplay muted loop controls>
+            <source src="../../../assets/step3.mov" type="video/mp4">
+          </video>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row class="center">
+          <h1><p>{{ 'intro.slide4.title' | translate }}</p></h1>
+        </ion-row>
+        <ion-row class="center">
+          <p>{{ 'intro.slide4.first' | translate }}</p>
+        </ion-row>
+        <ion-row class="center">
+          <video width="100%" autoplay muted loop controls>
+            <source src="../../../assets/step4.mov" type="video/mp4">
+          </video>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row class="center">
+          <h1><p>{{ 'intro.slide5.title' | translate }}</p></h1>
+        </ion-row>
+        <ion-row class="center">
+          <p>{{ 'intro.slide5.first' | translate }}</p>
+        </ion-row>
+        <ion-row class="center">
+          <video width="100%" autoplay muted loop controls>
+            <source src="../../../assets/step5.mov" type="video/mp4">
+          </video>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row class="center">
+          <h1><p>{{ 'intro.slide6.title' | translate }}</p></h1>
+        </ion-row>
+        <ion-row class="center">
+          <p>{{ 'intro.slide6.first' | translate }}</p>
+        </ion-row>
+        <ion-row class="center">
+          <video width="100%" autoplay muted loop controls>
+            <source src="../../../assets/step6.mov" type="video/mp4">
+          </video>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
